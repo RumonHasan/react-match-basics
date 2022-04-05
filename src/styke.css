@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95vmin;
+  height: 95vmin;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.game-start-btn {
+  padding: 5px;
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.card .front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid black;
+  position: absolute;
+  transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
+}
+
+.card .back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.card .front.matched {
+  background-color: #70ff6b;
+}
